@@ -1,0 +1,11 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\KingICT.Academy2021.DddFileSystem.Messaging\KingICT.Academy2021.DddFileSystem.Messaging.csproj" />
+  </ItemGroup>
+
+</Project>

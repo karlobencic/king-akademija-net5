@@ -1,0 +1,11 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\KingICT.Academy2021.DddFileSystem.Infrastructure\KingICT.Academy2021.DddFileSystem.Infrastructure.csproj" />
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,75 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31424.327
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KingICT.Academy2021.DddFileSystem.API", "KingICT.Academy2021.DddFileSystem.API\KingICT.Academy2021.DddFileSystem.API.csproj", "{E7100BE6-4C71-4B9D-9C9E-A69469C58437}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KingICT.Academy2021.DddFileSystem.Contract", "KingICT.Academy2021.DddFileSystem.Contract\KingICT.Academy2021.DddFileSystem.Contract.csproj", "{CA2968BF-DFA0-464C-8CC7-C9446A0A7C8F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KingICT.Academy2021.DddFileSystem.Infrastructure", "KingICT.Academy2021.DddFileSystem.Infrastructure\KingICT.Academy2021.DddFileSystem.Infrastructure.csproj", "{3012EDE3-D05F-43C1-B60D-843B95CA835D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KingICT.Academy2021.DddFileSystem.IOC", "KingICT.Academy2021.DddFileSystem.IOC\KingICT.Academy2021.DddFileSystem.IOC.csproj", "{C84A75E8-5819-45F9-8553-39EBB28335FB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KingICT.Academy2021.DddFileSystem.Messaging", "KingICT.Academy2021.DddFileSystem.Messaging\KingICT.Academy2021.DddFileSystem.Messaging.csproj", "{88733196-4EF7-424C-B09C-D0335611070D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KingICT.Academy2021.DddFileSystem.Model", "KingICT.Academy2021.DddFileSystem.Model\KingICT.Academy2021.DddFileSystem.Model.csproj", "{6930E69F-6037-4A29-8C61-B77CB2B923AF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KingICT.Academy2021.DddFileSystem.Repository", "KingICT.Academy2021.DddFileSystem.Repository\KingICT.Academy2021.DddFileSystem.Repository.csproj", "{F6B86F91-4A76-4D3B-A818-527F3415600B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KingICT.Academy2021.DddFileSystem.Service", "KingICT.Academy2021.DddFileSystem.Service\KingICT.Academy2021.DddFileSystem.Service.csproj", "{5D15BAA6-6FE8-4EEE-B7EC-78884428133E}"
+EndProject
+Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "KingICT.Academy2021.DddFileSystem.Database", "KingICT.Academy2021.DddFileSystem.Database\KingICT.Academy2021.DddFileSystem.Database.sqlproj", "{D3F07543-A729-481D-A974-8DA150F85892}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E7100BE6-4C71-4B9D-9C9E-A69469C58437}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E7100BE6-4C71-4B9D-9C9E-A69469C58437}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E7100BE6-4C71-4B9D-9C9E-A69469C58437}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E7100BE6-4C71-4B9D-9C9E-A69469C58437}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CA2968BF-DFA0-464C-8CC7-C9446A0A7C8F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CA2968BF-DFA0-464C-8CC7-C9446A0A7C8F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CA2968BF-DFA0-464C-8CC7-C9446A0A7C8F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CA2968BF-DFA0-464C-8CC7-C9446A0A7C8F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3012EDE3-D05F-43C1-B60D-843B95CA835D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3012EDE3-D05F-43C1-B60D-843B95CA835D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3012EDE3-D05F-43C1-B60D-843B95CA835D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3012EDE3-D05F-43C1-B60D-843B95CA835D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C84A75E8-5819-45F9-8553-39EBB28335FB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C84A75E8-5819-45F9-8553-39EBB28335FB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C84A75E8-5819-45F9-8553-39EBB28335FB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C84A75E8-5819-45F9-8553-39EBB28335FB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{88733196-4EF7-424C-B09C-D0335611070D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{88733196-4EF7-424C-B09C-D0335611070D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{88733196-4EF7-424C-B09C-D0335611070D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{88733196-4EF7-424C-B09C-D0335611070D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6930E69F-6037-4A29-8C61-B77CB2B923AF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6930E69F-6037-4A29-8C61-B77CB2B923AF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6930E69F-6037-4A29-8C61-B77CB2B923AF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6930E69F-6037-4A29-8C61-B77CB2B923AF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F6B86F91-4A76-4D3B-A818-527F3415600B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F6B86F91-4A76-4D3B-A818-527F3415600B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F6B86F91-4A76-4D3B-A818-527F3415600B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F6B86F91-4A76-4D3B-A818-527F3415600B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5D15BAA6-6FE8-4EEE-B7EC-78884428133E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5D15BAA6-6FE8-4EEE-B7EC-78884428133E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5D15BAA6-6FE8-4EEE-B7EC-78884428133E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5D15BAA6-6FE8-4EEE-B7EC-78884428133E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D3F07543-A729-481D-A974-8DA150F85892}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D3F07543-A729-481D-A974-8DA150F85892}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D3F07543-A729-481D-A974-8DA150F85892}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{D3F07543-A729-481D-A974-8DA150F85892}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D3F07543-A729-481D-A974-8DA150F85892}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D3F07543-A729-481D-A974-8DA150F85892}.Release|Any CPU.Deploy.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {91A13C71-1D43-4B4D-A7B6-8BD05161CFCC}
+	EndGlobalSection
+EndGlobal
