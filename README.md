@@ -1,7 +1,7 @@
 # DDD File System
 
 ### Used technologies
-- ASP.NET 5
+- ASP.NET Core 5
 - Entity Framework Core
 - MSSQL
 
