@@ -1,9 +1,11 @@
 ﻿using AutoMapper;
 using KingICT.Academy2021.DddFileSystem.Contract;
+using KingICT.Academy2021.DddFileSystem.Infrastructure;
 using KingICT.Academy2021.DddFileSystem.Model.Repositories;
 using KingICT.Academy2021.DddFileSystem.Repository;
 using KingICT.Academy2021.DddFileSystem.Service;
 using KingICT.Academy2021.DddFileSystem.Service.Mapping;
+using MediatR;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -30,6 +32,14 @@ namespace KingICT.Academy2021.DddFileSystem.IOC
             });
 
             services.AddSingleton(mappingConfig.CreateMapper());
+
+            // To use MediatR publishing, assemblies of domain events and handlers must be registered.
+            // Easiest way for registration is to use typeof keyword with core type of assembly where event and handler are located.
+            services.AddMediatR(
+                typeof(Model.Folder),
+                typeof(FolderService));
+
+            services.AddTransient<IDomainEventsDispatcher, DomainEventsDispatcher>();
         }
 
         private static void ConfigureRepositories(IServiceCollection services, IConfiguration configuration)

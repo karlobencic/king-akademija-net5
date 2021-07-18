@@ -1,8 +1,12 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
 using System.Threading.Tasks;
 using AutoMapper;
 using KingICT.Academy2021.DddFileSystem.Contract;
+using KingICT.Academy2021.DddFileSystem.Infrastructure;
 using KingICT.Academy2021.DddFileSystem.Messaging.Folder;
+using KingICT.Academy2021.DddFileSystem.Model;
 using KingICT.Academy2021.DddFileSystem.Model.Repositories;
 using KingICT.Academy2021.DddFileSystem.Service.Mapping;
 using Microsoft.Extensions.Logging;
@@ -14,12 +18,14 @@ namespace KingICT.Academy2021.DddFileSystem.Service
         private readonly IFolderRepository _repository;
         private readonly IMapper _mapper;
         private readonly ILogger<IFolderService> _logger;
+        private readonly IDomainEventsDispatcher _domainEventsDispatcher;
 
-        public FolderService(IFolderRepository repository, IMapper mapper, ILogger<IFolderService> logger)
+        public FolderService(IFolderRepository repository, IMapper mapper, ILogger<IFolderService> logger, IDomainEventsDispatcher domainEventsDispatcher)
         {
             _repository = repository;
             _mapper = mapper;
             _logger = logger;
+            _domainEventsDispatcher = domainEventsDispatcher;
         }
 
         public async Task<GetFoldersResponse> GetAllFolders(GetFoldersRequest request)
@@ -145,10 +151,15 @@ namespace KingICT.Academy2021.DddFileSystem.Service
                     return ResourceNotFound<DeleteFolderRequest, DeleteFolderResponse>(response);
                 }
 
-                var siblings = await _repository.GetSiblings(folder);
+                var siblings = await _repository.GetSiblings(folder) as List<Folder>;
 
                 await _repository.RemoveRange(siblings);
                 await _repository.Remove(folder);
+
+                folder.SetDeleted();
+                siblings.ForEach(f => f.SetDeleted());
+
+                await _domainEventsDispatcher.Publish(folder.DomainEvents.Union(siblings.SelectMany(s => s.DomainEvents)).ToList());
 
                 response.Success = true;
             }

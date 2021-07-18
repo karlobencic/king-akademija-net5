@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using KingICT.Academy2021.DddFileSystem.Infrastructure;
+using KingICT.Academy2021.DddFileSystem.Model.Events;
 
 namespace KingICT.Academy2021.DddFileSystem.Model
 {
@@ -39,6 +40,11 @@ namespace KingICT.Academy2021.DddFileSystem.Model
         public void SetParent(Folder folder)
         {
             Parent = folder;
+        }
+
+        public void SetDeleted()
+        {
+            AddDomainEvent(new FolderDeletedEvent(this));
         }
     }
 }

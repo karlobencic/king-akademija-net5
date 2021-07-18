@@ -1,8 +1,20 @@
-﻿namespace KingICT.Academy2021.DddFileSystem.Infrastructure
+﻿using System.Collections.Generic;
+
+namespace KingICT.Academy2021.DddFileSystem.Infrastructure
 {
     public abstract class EntityBase<TId>
     {
         public TId Id { get; set; }
+
+        private List<IDomainEvent> _domainEvents;
+
+        public List<IDomainEvent> DomainEvents => _domainEvents;
+
+        public void AddDomainEvent(IDomainEvent domainEvent)
+        {
+            _domainEvents ??= new List<IDomainEvent>();
+            _domainEvents.Add(domainEvent);
+        }
 
         public override bool Equals(object entity)
         {
