@@ -4,7 +4,7 @@ using MediatR;
 namespace KingICT.Academy2021.DddFileSystem.Infrastructure
 {
     /// <summary>
-    /// Base class for domain event. Implements INotification for MediatrR usage.
+    /// Base class for domain event. Implements INotification for MediatR usage.
     /// </summary>
     public abstract class DomainEventBase : IDomainEvent, INotification
     {
